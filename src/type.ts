@@ -24,3 +24,37 @@ const User: User ={
     Role: "Admin"
 }
 
+
+
+interface Animal{
+    Species: string
+}
+
+interface cat extends Animal{
+    breed:string
+}
+
+const cat:cat ={
+    Species:"Feline",
+    breed:"Persia"
+}
+
+type Vehicle ={
+    Brand: string,
+}
+
+type car = Vehicle &{
+    Model: string,
+    Registration: string,
+}
+
+const car:car={
+    Brand:"Toyota",
+    Model:"Corolla",
+    Registration:"ABC123"   
+}
+
+
+
+
+
