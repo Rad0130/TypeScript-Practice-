@@ -75,7 +75,40 @@ const showStatus =(status:status)=>{
 showStatus(someStatus as status);
 
 
+interface Port{
+    port?: number
+}
 
+const Port:Port={
+    port: 5000
+}
 
+const currentPort:number=Port.port!;
+
+const Info={
+    Name:"Shafiur",
+    Age: 25,
+    Email:"shafiur@example.com"
+} as const;
+
+// can not be changed because of as const
+
+const getUserName =(name:string|number)=>{
+    if(typeof name === "string") {
+    console.log(name.toUpperCase());
+    }
+    else{
+        console.log(name.toFixed(2));
+    }
+}
+
+const wrappedInArray=<T>(value:T)=>{
+    return [value];
+}
+
+const nameInfo=wrappedInArray("Shafiur");
+const numberInfo=wrappedInArray(25);
+
+nameInfo.map((key)=>key.toUpperCase());
 
 
